@@ -14,13 +14,13 @@ window.addEventListener("DOMContentLoaded", () => {
     const player = ruffle.createPlayer();
     const container = document.getElementById("ruffle-container");
 
-    player.style.width = "100w";
-    player.style.height = "100w";
+    player.style.width = "1086px";
+    player.style.height = "424px";
 
     container.appendChild(player);
 
     player.load({
-        url: "duck-life.swf", // MUST be real file in your project
+        url: "duck-life.swf",
         autoplay: "auto"
     });
 });
