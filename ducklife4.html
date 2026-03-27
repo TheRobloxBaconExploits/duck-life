@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+</head>
+<body style="margin:0;">
+
+<div id="ruffle-container"></div>
+
+<script>
+window.addEventListener("DOMContentLoaded", () => {
+    const ruffle = window.RufflePlayer.newest();
+    const player = ruffle.createPlayer();
+    const container = document.getElementById("ruffle-container");
+
+    player.style.width = "1086px";
+    player.style.height = "424px";
+
+    container.appendChild(player);
+
+    player.load({
+        url: "duck-life-4_20210406.swf",
+        autoplay: "auto"
+    });
+});
+</script>
+
+</body>
+</html>
